@@ -14,7 +14,7 @@
         </div>
         <div class="sec sec2">
           <h2 id="seconds">00</h2>
-          <span id="ampm">AM</span>
+          <span id="ampm"> AM </span>
          </div>
 		</section>
 		<script type="text/javascript">
@@ -23,6 +23,7 @@
 				let minutes = document.getElementById('minutes');
 				let seconds = document.getElementById('seconds');
 				let ampm = document.getElementById('ampm');
+				
 
 				let h = new Date().getHours();
 				let m = new Date().getMinutes();
@@ -30,19 +31,21 @@
 
 				if(h > 12){
 					h = h -12;
-					var am = "PM"
-					var am = "AM"
+					var am = "pm"
+					var am = "am"
+					
 				}
 				
                 h = (h < 10) ? "0" + h : h
                 m = (m < 10) ? "0" + m : m
                 s = (s < 10) ? "0" + s : s
-                
+
 				hours.innerHTML = h;
 				minutes.innerHTML = m;
 				seconds.innerHTML = s;
-				ampm.innerHTML = am;
-				ampm.innerHTML = pm;
+                ampm.innerHTML = pm;
+                ampm.innerHTML = am;
+
 			}
 
 			var interval = setInterval(clock, 1000);
